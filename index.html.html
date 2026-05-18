@@ -1,0 +1,37 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숏폼 중독 방지 타이머</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 상단 고정 카운터 -->
+    <div id="counter-badge">본 숏폼 개수: <span id="current-count">0</span> / 5</div>
+
+    <!-- 숏폼 피드 시뮬레이션 -->
+    <div id="feed-container">
+        <div class="video-card" style="background-color: #ff4757;"><h3>첫 번째 숏폼 영상 📱</h3></div>
+        <div class="video-card" style="background-color: #2ed573;"><h3>두 번째 숏폼 영상 🎵</h3></div>
+        <div class="video-card" style="background-color: #1e90ff;"><h3>세 번째 숏폼 영상 🐶</h3></div>
+        <div class="video-card" style="background-color: #ffa502;"><h3>네 번째 숏폼 영상 🍕</h3></div>
+        <div class="video-card" style="background-color: #9b59b6;"><h3>다섯 번째 숏폼 영상 🎮</h3></div>
+        <div class="video-card" style="background-color: #1abc9c;"><h3>여섯 번째 숏폼 영상 (여기선 차단돼야 함!) 🚫</h3></div>
+    </div>
+
+    <!-- 차단 팝업 레이어 -->
+    <div id="block-overlay" class="hidden">
+        <div class="popup-content">
+            <h2>🚨 스크롤 제한 도달! 🚨</h2>
+            <p>오늘 설정한 숏폼 시청 개수(5개)를 초과했습니다.</p>
+            <p>이제 스마트폰을 내려놓고 다른 생산적인 일을 해볼까요?</p>
+            <button id="close-btn" onclick="location.reload()">처음부터 다시 하기</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
