@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숏폼 중독 방지 타이머</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 상단 스크롤 횟수 표시 바 -->
+    <div class="counter-badge">
+        현재 스크롤 횟수: <span id="scroll-count">0</span> / 10
+    </div>
+
+    <!-- 숏폼 피드 컨테이너 -->
+    <div id="feed-container">
+        <!-- 초기 콘텐츠 1개 -->
+        <div class="short-video-card" style="background-color: #ff6b6b;">
+            <h2>Shorts 콘텐츠 1</h2>
+            <p>아래로 스크롤하여 다음 영상을 보세요.</p>
+        </div>
+    </div>
+
+    <!-- 10회 제한 경고 모달창 -->
+    <div id="warning-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>⚠️ 숏폼 과몰입 경고 ⚠️</h2>
+            <p>오늘 지정한 10회의 스크롤 제한을 모두 소모하셨습니다.</p>
+            <p>도파민 과다 분비를 막기 위해 추가 로드가 차단됩니다. 이제 스마트폰을 내려놓고 잠시 휴식을 취해보세요!</p>
+            <button id="close-btn" onclick="location.reload()">다시 시작하기</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
